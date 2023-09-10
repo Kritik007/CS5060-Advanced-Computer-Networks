@@ -33,15 +33,14 @@
   I chose C++ over Python for Socket Programming. The main reason is that C++ has better performance, better resource management, and better support for low-level networking, which is critical for building fast and responsive networking apps.
 </div>
 
-### Prerequisites
-
+## Prerequisites
 Before running the Project, ensure you have the following prerequisites:
 
 - A C++ development environment (e.g., g++ compiler)
 - Basic understanding of socket programming
 - Access/Knowledge of a UNIX System/Commands preferably Ubuntu 22.04
 
-### Installation and running the code.
+## Installation and running the code.
 
 1. Clone the repository to your local machine:
 ```shell
