@@ -41,11 +41,13 @@ Before running the Project, ensure you have the following prerequisites:
 - Access/Knowledge of a UNIX System/Commands preferably Ubuntu 22.04
 
 ## Installation and running the code.
+<br/>
 
 1. Clone the repository to your local machine:
 ```shell
 git clone https://github.com/CS5060-Advanced-Computer-Networks.git
 ```
+<br/>
 
 2. On Ubuntu systems the iproute2 package (including netem) can be installed using following command:
    The purpose of this command is to emulate packet loss at the network interface card (NIC) level which we will see further.
@@ -53,24 +55,29 @@ git clone https://github.com/CS5060-Advanced-Computer-Networks.git
 ```sh
 sudo apt install iproute2
 ```
+<br/>
 
 3. Choose the directory of Socket Programming
 
 ```shell
 cd Socket\ Programming/
 ```
+<br/>
 
 4. Start the UDP Server using your C++ compiler:
 
 ```shell
 cd UDP
 ```
+<br/>
 
   * UDP Server
 ```shell
 g++ UDPPingerServer.cpp -o UDPPingerServer
 ./UDPPingerServer
 ```
+<br/>
+
   * UDP Modified Server - for this, we need emulate packet loss at
 the network interface card (NIC) level for which we have installed iproute2 in Step 2
 ```shell
@@ -78,36 +85,46 @@ sudo tc qdisc add lo root netem loss 33%
 g++ UDPPingerModifiedServer.cpp -o UDPPingerModifiedServer
 ./UDPPingerModifiedServer
 ```
+<br/>
+
   * UDP Client - Ensure your server is running before starting the client.
 ```shell
 g++ UDPPingerCleint.cpp -o UDPPingerClient
 ./UDPPingerClient
 ```
+<br/>
 
 5. Start the TCP Server using your C++ compiler:
 
 ```shell
 cd TCP
 ```
+<br/>
 
   * TCP Server
 ```shell
 g++ TCPPingerServer.cpp -o TCPPingerServer
 ./TCPPingerServer
 ```
-  *  TCP Modified Server - for this, we need emulate packet loss at
+<br/>
+
+*  TCP Modified Server - for this, we need emulate packet loss at
 the network interface card (NIC) level for which we have installed iproute2 in Step 2
 ```shell
 sudo tc qdisc add lo root netem loss 33%
 g++ TCPPingerModifiedServer.cpp -o TCPPingerModifiedServer
 ./TCPPingerModifiedServer
 ```
-  *  TCP Concurrent Server - a server that waits on the welcoming socket and then creates a new thread or process to handle the incoming ping messages from different clients.
+<br/>
+
+*  TCP Concurrent Server - a server that waits on the welcoming socket and then creates a new thread or process to handle the incoming ping messages from different clients.
 ```shell
 g++ TCPPingerConcurrentServer.cpp -o TCPPingerConcurrentServer -pthread
 ./TCPPingerConcurrentServer
 ```
-  *  TCP Client - Ensure your server is running before starting the client.
+<br/>
+
+*  TCP Client - Ensure your server is running before starting the client.
 ```shell
 g++ TCPPingerCleint.cpp -o TCPPingerClient
 ./TCPPingerClient
