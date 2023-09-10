@@ -116,7 +116,7 @@ g++ TCPPingerCleint.cpp -o TCPPingerClient
 
 ## License
 
-Created under the MIT License. See [LICENSE](https://github.com/Kritik007//CS5060-Advanced-Computer-Networks/blob/main/LICENSE.md) for more information.
+Created under the MIT License. See [LICENSE](https://github.com/Kritik007//CS5060-Advanced-Computer-Networks/blob/main/LICENSE) for more information.
 
 ## Authors
 
