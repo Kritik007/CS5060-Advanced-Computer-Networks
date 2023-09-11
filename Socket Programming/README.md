@@ -15,10 +15,9 @@
 ## Table Of Contents
 
 * [About the Project](#about-the-project)
-* [Built using](#built-using)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
+* [Built on](#built-on)
+* [Prerequisites](#prerequisites)
+* [Installation and running the code](#installation-and-running-the-code)
 * [License](#license)
 * [Authors](#authors)
 * [Acknowledgements](#acknowledgements)
@@ -28,7 +27,7 @@
   The assignment is based on Socket Programming. In order to complete it, we first had to analyse a straightforward Python Ping server and create a corresponding client. These programs offer functionality similar to that of the conventional ping programs found in contemporary operating systems. However, these programs communicate with one another using the less complex UDP/TCP protocol rather than the default Internet Control Message Protocol (ICMP). The ping protocol enables a client system to send a packet of data to a remote machine, and the remote machine to return the data to the client in uppercase (a process known as echoing loud!). The ping protocol, among other things, enables hosts to ascertain the travel time between two machines, i.e., round-trip-time.
 </div>
 
-## Built using
+## Built on
 <div align="justify">
   I chose C++ over Python for Socket Programming. The main reason is that C++ has better performance, better resource management, and better support for low-level networking, which is critical for building fast and responsive networking apps.
 </div>
@@ -37,15 +36,22 @@
 Before running the Project, ensure you have the following prerequisites:
 
 - A C++ development environment (e.g., g++ compiler)
+<br/>
+
+```shell
+sudo apt install g++
+```
+<br/>
+
 - Basic understanding of socket programming
 - Access/Knowledge of a UNIX System/Commands preferably Ubuntu 22.04
 
-## Installation and running the code.
+## Installation and running the code
 <br/>
 
-1. Clone the repository to your local machine:
+1. Choose the Source codes containing folder using the following command:
 ```shell
-git clone https://github.com/CS5060-Advanced-Computer-Networks.git
+cd Src/
 ```
 <br/>
 
@@ -57,18 +63,9 @@ sudo apt install iproute2
 ```
 <br/>
 
-3. Choose the directory of Socket Programming
 
-```shell
-cd Socket\ Programming/
-```
-<br/>
+3. Start the UDP Server using your C++ compiler:
 
-4. Start the UDP Server using your C++ compiler:
-
-```shell
-cd UDP
-```
 <br/>
 
   * UDP Server
@@ -88,16 +85,13 @@ g++ UDPPingerModifiedServer.cpp -o UDPPingerModifiedServer
 
   * UDP Client - Ensure your server is running before starting the client.
 ```shell
-g++ UDPPingerCleint.cpp -o UDPPingerClient
+g++ UDPPingerClient.cpp -o UDPPingerClient
 ./UDPPingerClient
 ```
 <br/>
 
-5. Start the TCP Server using your C++ compiler:
+4. Start the TCP Server using your C++ compiler:
 
-```shell
-cd TCP
-```
 <br/>
 
   * TCP Server
@@ -117,7 +111,7 @@ g++ TCPPingerModifiedServer.cpp -o TCPPingerModifiedServer
 
 *  TCP Concurrent Server - a server that waits on the welcoming socket and then creates a new thread or process to handle the incoming ping messages from different clients.
 ```shell
-g++ TCPPingerConcurrentServer.cpp -o TCPPingerConcurrentServer -pthread
+g++ TCPPingerConcurrentServer.cpp -o TCPPingerConcurrentServer -lpthread
 ./TCPPingerConcurrentServer
 ```
 <br/>
