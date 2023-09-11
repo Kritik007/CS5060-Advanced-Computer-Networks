@@ -120,7 +120,7 @@ g++ TCPPingerConcurrentServer.cpp -o TCPPingerConcurrentServer -lpthread
 
 *  TCP Client - Ensure your server is running before starting the client.
 ```shell
-g++ TCPPingerCleint.cpp -o TCPPingerClient
+g++ TCPPingerClient.cpp -o TCPPingerClient
 ./TCPPingerClient
 ```
 
