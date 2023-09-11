@@ -81,7 +81,6 @@ g++ UDPPingerServer.cpp -o UDPPingerServer
   * UDP Modified Server - for this, we need emulate packet loss at
 the network interface card (NIC) level for which we have installed iproute2 in Step 2
 ```shell
-sudo tc qdisc add lo root netem loss 33%
 g++ UDPPingerModifiedServer.cpp -o UDPPingerModifiedServer
 ./UDPPingerModifiedServer
 ```
@@ -111,7 +110,6 @@ g++ TCPPingerServer.cpp -o TCPPingerServer
 *  TCP Modified Server - for this, we need emulate packet loss at
 the network interface card (NIC) level for which we have installed iproute2 in Step 2
 ```shell
-sudo tc qdisc add lo root netem loss 33%
 g++ TCPPingerModifiedServer.cpp -o TCPPingerModifiedServer
 ./TCPPingerModifiedServer
 ```
