@@ -49,8 +49,10 @@ sudo apt install g++
 ## Installation and running the code
 <br/>
 
-1. Choose the Source codes containing folder using the following command:
+1. Download the source codes, untar it and choose the containing folder using the following command:
 ```shell
+wget https://github.com/Kritik007/CS5060-Advanced-Computer-Networks/releases/download/CS23MTECH11009/Socket-Programming.tar.bz
+tar -xvzf Socket-Programming.tar.bz
 cd Src/
 ```
 <br/>
@@ -121,6 +123,9 @@ g++ TCPPingerConcurrentServer.cpp -o TCPPingerConcurrentServer -lpthread
 g++ TCPPingerCleint.cpp -o TCPPingerClient
 ./TCPPingerClient
 ```
+
+### Note: 
+You may want to modify the client/server codes as per needs. Say modify the interface name for tc-netem or modify the Server IP in client files.
 
 ## License
 
